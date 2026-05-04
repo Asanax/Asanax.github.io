@@ -16,7 +16,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
-
+ 
 <body>
     <!-- Header -->
     <header class="header">
@@ -31,6 +31,7 @@
             <a href="#experience" data-i18n="nav_exp">Deneyim</a>
             <a href="#processes" data-i18n="nav_eba">eBA Süreçleri</a>
             <a href="#companies" data-i18n="nav_ref">Referanslar</a>
+            <a href="#certificates" data-i18n="nav_cert">Sertifikalar</a>
             <a href="#ek-bilgiler" data-i18n="nav_extra">Ek Bilgiler</a>
         </nav>
         
@@ -50,36 +51,27 @@
                 <a href="https://asanax.github.io" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="https://www.linkedin.com/in/oğuzhan-kuzu" target="_blank"><i class="bx bxl-linkedin"></i></a>
             </div>
-            <!-- CV Linki düzeltildi: Boşluklar ve ters slash web'de hataya yol açar -->
+            <!-- CV Linki -->
             <a href="static/PDF/CV Oğuzhan Kuzu.pdf" download="CV_Oguzhan_Kuzu.pdf" class="btn download-cv" data-i18n="btn_cv">CV İndir</a>
         </div>
 
         <div class="home-img">
-            <!-- YENİ: Teknoloji Yörünge (Orbit) Animasyonu -->
+            <!-- Teknoloji Yörünge (Orbit) Animasyonu -->
             <div class="orbit-container">
-                <!-- Merkez -->
                 <div class="center-circle">OK</div>
-                
-                <!-- 1. İkon: C# -->
                 <div class="orbit-element icon-csharp">
                     <div class="counter-spin">
                         <img src="static/Misc/Csharp.png" alt="C#" />
                     </div>
                 </div>
-                
-                <!-- 2. İkon: MS SQL -->
                 <div class="orbit-element icon-sql">
                     <div class="counter-spin">
                         <img src="static/Misc/eBA.png" alt="eBA Workflow" />
                     </div>
                 </div>
-
-                <!-- 3. İkon: eBA Workflow -->
                 <div class="orbit-element icon-eba">
                     <div class="counter-spin">
-                        <!-- eBA için SVG devicon olmadığından, şık bir metin/ikon kombinasyonu tasarlandı -->
                         <img src="static/Misc/SQL.png" alt="MS SQL" />
-                        </div>
                     </div>
                 </div>
             </div>
@@ -343,26 +335,59 @@
         <h2 class="heading"><span data-i18n="ref_title1">(eBA) Çalıştığım</span> <span data-i18n="ref_title2">Firmalar</span></h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <!-- Firma Kartları -->
                 <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Arçelik-Logo.wine.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Bilkom_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Cardif_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Demirören_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/GoodYear_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Dominyay-Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/İpekyol_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Polat_logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/DP_World_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Opet_logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Darüşşafaka_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Gen-logo-3x.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Pegasus_Airlines_logo.svg.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/tbank_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Temsa_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Zorlu_Holding_logo.svg.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/ytu-footer-logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
-                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/isbir_Logo.png" alt="Arçelik Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Bilkom_Logo.png" alt="Bilkom Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Cardif_Logo.png" alt="Cardif Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Demirören_Logo.png" alt="Demirören Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/GoodYear_Logo.png" alt="GoodYear Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Dominyay-Logo.png" alt="Dominyay Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/İpekyol_Logo.png" alt="İpekyol Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Polat_logo.png" alt="Polat Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/DP_World_Logo.png" alt="DP World Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Opet_logo.png" alt="Opet Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Darüşşafaka_Logo.png" alt="Darüşşafaka Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Gen-logo-3x.png" alt="Gen Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Pegasus_Airlines_logo.svg.png" alt="Pegasus Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/tbank_Logo.png" alt="Tbank Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Temsa_Logo.png" alt="Temsa Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/Zorlu_Holding_logo.svg.png" alt="Zorlu Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/ytu-footer-logo.png" alt="YTU Logo" style="width: 100px; height: auto;"></div></div>
+                <div class="swiper-slide"><div class="comp-box"><img src="static/Logo/isbir_Logo.png" alt="İşbir Logo" style="width: 100px; height: auto;"></div></div>
             </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- SERTİFİKALAR BÖLÜMÜ -->
+    <section class="certificates" id="certificates">
+        <h2 class="heading"><span data-i18n="cert_title1">Sahip Olduğum</span> <span data-i18n="cert_title2">Sertifikalar</span></h2>
+        
+        <div class="swiper certSwiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide cert-slide">
+                    <div class="cert-box">
+                        <img src="static/Sertifikalar/sql-101.jpg" alt="SQL İle Veritabanı Sorgulama 101" title="Büyütmek İçin Tıklayın">
+                        <div class="cert-info">
+                            <h3 data-i18n="cert_1_title">SQL İle Veritabanı Sorgulama 101</h3>
+                            <p data-i18n="cert_1_inst">Turkcell Akademi - 23.04.2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide cert-slide">
+                    <div class="cert-box">
+                        <img src="static/Sertifikalar/sql-201.jpg" alt="İlişkisel Veritabanlarında Sorgulama 201" title="Büyütmek İçin Tıklayın">
+                        <div class="cert-info">
+                            <h3 data-i18n="cert_2_title">İlişkisel Veritabanlarında Sorgulama 201</h3>
+                            <p data-i18n="cert_2_inst">Turkcell Akademi - 25.04.2026</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
@@ -377,7 +402,6 @@
                 <h3 data-i18n="ext_uni_title">Üniversite Projeleri</h3>
                 <p><strong data-i18n="ext_uni_p">Personel Bordro Takip Programı</strong></p>
                 <p class="small-text" data-i18n="ext_uni_desc">(Tez projesi olarak geliştirilmiştir. Veritabanı mimarisi ve çalışan maaş, bordro takibi süreçlerini kapsar.)</p>
-                <!-- Dosya yolundaki boşluklar web tarayıcısında hataya sebep olabilir, dosya ismini tire veya alt tire ile kaydetmeniz önerilir -->
                 <a href="static/PDF/Personel Bordro Takip.pdf" download="Personel_Bordro_Takip.pdf" class="btn-small" data-i18n="ext_doc_btn">Dokümanı İndir</a>
             </div>
 
@@ -408,6 +432,12 @@
             <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
         </div>
     </footer>
+
+    <!-- ZOOM MODAL (Tıklayınca Açılan Tam Ekran Resim) -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="image-modal-content" id="zoomedImg" alt="Büyütülmüş Sertifika">
+    </div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>

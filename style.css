@@ -2,7 +2,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; border: none; outline: none; scroll-behavior: smooth; font-family: "Poppins", sans-serif; }
 
-/* CSS VARIABLES (Temaların sorunsuz değişmesi için) */
+/* CSS VARIABLES */
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
@@ -13,7 +13,7 @@
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
-/* AÇIK TEMA (Light Mode) */
+/* AÇIK TEMA */
 body.light-mode {
   --bg-color: #f4f5f8;
   --second-bg-color: #ffffff;
@@ -57,108 +57,22 @@ span { color: var(--main-color); }
 .home-content p { font-size: 1.6rem; margin: 2rem 0; line-height: 1.6; }
 .social-media a { display: inline-flex; justify-content: center; align-items: center; width: 4.5rem; height: 4.5rem; background: transparent; border: 0.2rem solid var(--main-color); border-radius: 50%; font-size: 2.4rem; color: var(--main-color); margin: 2rem 1.5rem 2rem 0; transition: 0.5s ease; }
 .social-media a:hover { background: var(--main-color); color: var(--bg-color); box-shadow: 0 0 1.5rem var(--main-color); }
-
 .btn { display: inline-block; padding: 1.2rem 2.8rem; background: var(--main-color); border-radius: 4rem; font-size: 1.6rem; color: #fff; letter-spacing: 0.1rem; font-weight: 600; transition: 0.3s ease; }
 .btn:hover { box-shadow: 0 0 1rem var(--main-color); opacity: 0.9; }
 
-/* ==============================================================
-   YENİ: YÖRÜNGE (ORBİT) ANİMASYONU CSS YAPISI
-============================================================== */
+/* YÖRÜNGE ANİMASYONU */
 .home-img { flex: 1; display: flex; justify-content: center; align-items: center; }
-
-.orbit-container {
-    position: relative;
-    /* Konteynırı biraz daha genişlettik */
-    width: 35vw; 
-    max-width: 400px; 
-    min-width: 280px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 2px dashed var(--main-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: spinOrbit 25s linear infinite;
-    margin: 0 auto;
-}
-
-.center-circle {
-    width: 35%;
-    height: 35%;
-    background: var(--main-color);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.5rem; /* Boyutu dengelemek için hafif küçültüldü */
-    font-weight: 800;
-    animation: spinOrbitReverse 25s linear infinite;
-    box-shadow: 0 0 2rem var(--main-color);
-    z-index: 2;
-}
-
-.orbit-element {
-    position: absolute;
-    /* İkonların genel boyutunu artırmak için %25'ten %32'ye çıkardık */
-    width: 32%; 
-    aspect-ratio: 1;
-    z-index: 3;
-    /* translate'i burada bırakıyoruz, konumlandırma sınıflarında çakışmaması için */
-    transform: translate(-50%, -50%);
-}
-
-.counter-spin {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff; 
-    border-radius: 50%;
-    border: 3px solid var(--main-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* ÖNEMLİ: %18 olan padding'i %8'e indirdik, böylece resim alanı büyüdü */
-    padding: 8%; 
-    box-shadow: var(--box-shadow);
-    animation: spinOrbitReverse 25s linear infinite;
-}
-
-.counter-spin img {
-    width: 100%;
-    height: 100%;
-    /* Resmin kalitesini bozmadan alanı kaplamasını sağlar */
-    object-fit: contain;
-    /* Bazı logoların kendi iç boşluğu olduğu için hafif bir zoom ekledik */
-    transform: scale(1.1); 
-}
-
-/* İkonların Eşkenar Üçgen Konumları */
-.icon-csharp { 
-    left: 50%; 
-    top: 0%; 
-}
-.icon-sql { 
-    left: 93.3%; 
-    top: 75%; 
-}
-.icon-eba { 
-    left: 6.7%; 
-    top: 75%; 
-}
-/* 3 İkonun Eşkenar Üçgen Formunda (Açılarla) Konumlandırılması */
+.orbit-container { position: relative; width: 35vw; max-width: 400px; min-width: 280px; aspect-ratio: 1; border-radius: 50%; border: 2px dashed var(--main-color); display: flex; justify-content: center; align-items: center; animation: spinOrbit 25s linear infinite; margin: 0 auto; }
+.center-circle { width: 35%; height: 35%; background: var(--main-color); color: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 3.5rem; font-weight: 800; animation: spinOrbitReverse 25s linear infinite; box-shadow: 0 0 2rem var(--main-color); z-index: 2; }
+.orbit-element { position: absolute; width: 32%; aspect-ratio: 1; z-index: 3; transform: translate(-50%, -50%); }
+.counter-spin { width: 100%; height: 100%; background-color: #ffffff; border-radius: 50%; border: 3px solid var(--main-color); display: flex; justify-content: center; align-items: center; padding: 8%; box-shadow: var(--box-shadow); animation: spinOrbitReverse 25s linear infinite; }
+.counter-spin img { width: 100%; height: 100%; object-fit: contain; transform: scale(1.1); }
 .icon-csharp { left: 50%; top: 0%; }
 .icon-sql { left: 93.3%; top: 75%; }
 .icon-eba { left: 6.7%; top: 75%; }
 
-@keyframes spinOrbit {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-@keyframes spinOrbitReverse {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(-360deg); }
-}
-
+@keyframes spinOrbit { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes spinOrbitReverse { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
 
 /* About Section */
 .about { background: var(--second-bg-color); display: flex; justify-content: space-between; align-items: center; gap: 5rem; }
@@ -218,10 +132,42 @@ span { color: var(--main-color); }
 .comp-box:hover { border-color: var(--main-color); color: var(--main-color); transform: scale(1.05); }
 .swiper-pagination-bullet-active { background: var(--main-color) !important; }
 
+/* SERTİFİKALAR SLIDER TASARIMI */
+.certificates { background: var(--second-bg-color); min-height: auto; padding-bottom: 5rem; }
+.certSwiper { width: 100%; max-width: 1000px; padding: 2rem 6rem 5rem 6rem; margin: 0 auto; overflow: hidden; position: relative; }
+.cert-slide { display: flex; justify-content: center; align-items: stretch; height: auto; padding: 1rem 0; }
+.cert-box { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 1.5rem; box-shadow: var(--box-shadow); padding: 2.5rem; text-align: center; width: 100%; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.cert-box:hover { border-color: var(--main-color); box-shadow: 0 0 1.5rem rgba(0, 210, 211, 0.2); transform: translateY(-5px); }
+
+.cert-box img { 
+    width: 100%; 
+    max-width: 800px; 
+    max-height: 450px; 
+    object-fit: contain; 
+    border-radius: 0.5rem; 
+    margin-bottom: 2rem; 
+    background: #ffffff; 
+    padding: 1rem; 
+    cursor: zoom-in; /* Resmin üzerine gelince farenin büyüteç olması için eklendi */
+    transition: 0.3s;
+}
+.cert-box img:hover {
+    transform: scale(1.02); /* Üzerine gelince resmin minik bir şekilde öne çıkması */
+}
+
+.cert-box h3 { font-size: 2.2rem; color: var(--text-color); margin-bottom: 0.5rem; }
+.cert-box p { font-size: 1.5rem; color: #888; font-weight: 500; }
+
+.certSwiper .swiper-button-next, .certSwiper .swiper-button-prev { color: var(--main-color); background: var(--box-bg); width: 4.5rem; height: 4.5rem; border-radius: 50%; box-shadow: var(--box-shadow); top: 50%; transform: translateY(-50%); margin-top: 0; }
+.certSwiper .swiper-button-next { right: 10px; }
+.certSwiper .swiper-button-prev { left: 10px; }
+.certSwiper .swiper-button-next:after, .certSwiper .swiper-button-prev:after { font-size: 2rem; font-weight: bold; }
+.certSwiper .swiper-pagination { bottom: 10px; }
+
 /* Ek Bilgiler Grid */
-.ek-bilgiler { background: var(--second-bg-color); padding-bottom: 10rem; }
+.ek-bilgiler { background: var(--bg-color); padding-bottom: 10rem; }
 .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-.info-card { background: var(--bg-color); padding: 4rem 3rem; border-radius: 1.5rem; text-align: center; transition: 0.3s; border: 1px solid var(--border-color); box-shadow: var(--box-shadow); display: flex; flex-direction: column; justify-content: space-between;}
+.info-card { background: var(--second-bg-color); padding: 4rem 3rem; border-radius: 1.5rem; text-align: center; transition: 0.3s; border: 1px solid var(--border-color); box-shadow: var(--box-shadow); display: flex; flex-direction: column; justify-content: space-between;}
 .info-card:hover { transform: translateY(-10px); border-color: var(--main-color); }
 .info-card i { font-size: 6rem; color: var(--main-color); margin-bottom: 2rem; }
 .info-card h3 { font-size: 2.4rem; margin-bottom: 1.5rem; }
@@ -231,10 +177,59 @@ span { color: var(--main-color); }
 .btn-small:hover { background: var(--main-color); color: #fff; }
 
 /* Footer */
-.footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 2rem 9%; background: var(--bg-color); }
+.footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 2rem 9%; background: var(--second-bg-color); }
 .footer-text p { font-size: 1.6rem; }
 .footer-iconTop a { display: inline-flex; justify-content: center; align-items: center; padding: 1rem; background: var(--main-color); border-radius: 0.8rem; transition: 0.5s ease; color: #fff; font-size: 2.4rem;}
 .footer-iconTop a:hover { box-shadow: 0 0 1rem var(--main-color); }
+
+/* =========================================
+   SERTİFİKA ZOOM MODALI (YENİ EKLENDİ)
+========================================= */
+.image-modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.image-modal.show {
+    display: flex; /* Aktif edildiğinde görünür olur */
+    opacity: 1;
+}
+.image-modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
+    object-fit: contain;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+.image-modal.show .image-modal-content {
+    transform: scale(1); /* Açıldığında hafifçe büyüyerek gelir */
+}
+.close-modal {
+    position: absolute;
+    top: 2.5rem;
+    right: 4rem;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10000;
+}
+.close-modal:hover, .close-modal:focus {
+    color: var(--main-color);
+}
 
 /* Breakpoints */
 @media (max-width: 991px) {
@@ -243,7 +238,7 @@ span { color: var(--main-color); }
   section { padding: 10rem 4% 2rem; }
   .home, .about { flex-direction: column; text-align: center; }
   .about-content h2, .about-content h3 { text-align: center; }
-  .orbit-container { width: 50vw; max-width: 300px; margin-top: 4rem; } /* Mobil ekran orbit uyumu */
+  .orbit-container { width: 50vw; max-width: 300px; margin-top: 4rem; }
   .about-img img { width: 70vw; max-width: 400px; }
   .social-media a { margin: 2rem 1rem; }
 }
@@ -254,4 +249,11 @@ span { color: var(--main-color); }
   .navbar a { display: block; font-size: 2rem; margin: 3rem 0; text-align: center; margin-left: 0; }
   .home-content h1 { font-size: 4rem; }
   #filters-search-bar { flex-direction: column; }
+  .certSwiper { padding: 2rem 1rem 5rem 1rem; }
+  .certSwiper .swiper-button-next, .certSwiper .swiper-button-prev { display: none; }
+  .cert-box img { max-height: 300px; padding: 0.5rem; }
+  .cert-box { padding: 1.5rem; }
+  
+  /* Mobilde çarpı işaretinin yerini daha okunabilir bir köşeye taşıdık */
+  .close-modal { top: 1.5rem; right: 2.5rem; font-size: 4.5rem; }
 }
